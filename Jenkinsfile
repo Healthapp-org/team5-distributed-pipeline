@@ -48,6 +48,7 @@ pipeline{
               stage('sub-job5 by ozo'){
                 steps{
                   sh 'du -h'
+                  sh 'df -h'
                 }
               }
               stage('sub-job6 by princess'){
@@ -86,7 +87,7 @@ pipeline{
         echo 'successful build'
       }    
     }
-    stage('7-System statistic'){
+    stage('7-System Analysis'){
       agent {
         label {
           label 'slave3'
