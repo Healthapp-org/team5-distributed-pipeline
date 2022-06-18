@@ -7,7 +7,7 @@ pipeline{
   stages{
     stage('1-git-checkout'){
       steps{
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-new-id', url: 'https://github.com/Appbank-Etech/D2T-Jenkins-worker-Pipeline.git']]])  }
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'f7c765a1-e95f-44ad-9f53-7b9fc6ad20ec', url: 'https://github.com/Healthapp-org/team5-distributed-pipeline.git']]])  }
     } 
     stage('2-parallel-job by princess, uche, kanayo'){
       parallel{
